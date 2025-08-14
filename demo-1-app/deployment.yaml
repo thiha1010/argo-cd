@@ -4,7 +4,7 @@ metadata:
   labels:
     app: demoapp
   name: demoapp-dep
-  namespace: default
+  namespace: demoapp
 spec:
   replicas: 2
   selector:
