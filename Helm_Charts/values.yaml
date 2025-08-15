@@ -1,0 +1,11 @@
+replicaCount: 1
+
+image:
+  repository: quay.io/thiha0000/demoapp
+  pullPolicy: IfNotPresent
+  tag: "v1"
+
+service:
+  type: NodePort
+  port: 80
+  nodePort: 31099
