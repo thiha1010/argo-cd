@@ -16,5 +16,5 @@ spec:
         app: demoapp
     spec:
       containers:
-      - image: quay.io/thiha0000/demoapp:v1
+      - image: quay.io/thiha0000/demoapp:v2
         name: demoapp
