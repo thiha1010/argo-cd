@@ -1,18 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: demoapp
+  name: webapp1
   namespace: argocd
 spec:
   destination:
-    namespace: demoapp
+    namespace: webapp1
     server: https://kubernetes.default.svc
    syncPolicy:
-    automated: {}
-    syncOptions:
-      - CreateNamespace=true
+     automated: {}
+     syncOptions:
+       - CreateNamespace=true
   source:
     path: declarative_demo/apps/webapp1
     repoURL: https://github.com/thiha1010/argo-cd.git
     targetRevision: HEAD
-  project: demoapp
+  project: default
