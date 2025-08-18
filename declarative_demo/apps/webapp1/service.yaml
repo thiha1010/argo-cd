@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: webapp1
+  name: webapp1-svc
+spec:
+  ports:
+  - name: webapp1-ports
+    port: 80
+    protocol: TCP
+    targetPort: 3000
+  selector:
+    app: webapp1
+  type: NodePort
