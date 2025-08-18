@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: webapp2
+  namespace: argocd
+spec:
+  destination:
+    namespace: webapp2
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true
+  source:
+    path: declarative_demo/apps/webapp2
+    repoURL: https://github.com/thiha1010/argo-cd.git
+    targetRevision: HEAD
+  project: default

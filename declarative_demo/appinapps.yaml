@@ -1,0 +1,12 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: webappone
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+  source:
+    path: declarative_demo/apps
+    repoURL: https://github.com/thiha1010/argo-cd.git
+    targetRevision: HEAD
+  project: default
