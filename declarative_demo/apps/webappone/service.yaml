@@ -2,14 +2,14 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: webapp1
-  name: webapp1-svc
+    app: webappone
+  name: webappone-svc
 spec:
   ports:
-  - name: webapp1-ports
+  - name: webappone-ports
     port: 80
     protocol: TCP
     targetPort: 3000
   selector:
-    app: webapp1
+    app: webappone
   type: NodePort

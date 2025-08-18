@@ -2,18 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: webapp1
-  name: webapp1-dep
+    app: webappone
+  name: webappone-dep
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: webapp1
+      app: webappone
   template:
     metadata:
       labels:
-        app: webapp1
+        app: webappone
     spec:
       containers:
       - image: quay.io/thiha0000/demoapp:v1
-        name: webapp1
+        name: webappone
